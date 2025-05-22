@@ -3,7 +3,7 @@
 <html lang="en-ca">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Simplified Long Division" />
+    <meta name="description" content="Volume of a Sphere" />
     <meta name="keywords" content="mths, ics2o" />
     <meta name="author" content="Devin Boucher" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
-    <title>Long Division</title>
+    <title>Volume of a Sphere</title>
   </head>
 
   <body>
@@ -29,38 +29,22 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Simplified Long Division</span>
+          <span class="mdl-layout-title">Volume of a Sphere</span>
         </div>
       </header>
       <main class="mdl-layout__content">
         <div class="right-image">
-          <img id="math-image" src="./images/long-division-image-redesigned.webp" alt="Math formula" />
+          <img
+            id="math-image"
+            src="./images/sphere-diagram.png"
+            alt="Sphere diagram"
+          />
         </div>
         <div class="page-content" style="padding: 16px">
-          <h4>Enter two positive numbers for division</h4>
-          <form>
-            <div class="mdl-textfield mdl-js-textfield" style="display: block">
-              <input class="mdl-textfield__input" type="number" id="dividend" />
-              <label class="mdl-textfield__label" for="dividend"
-                >Enter dividend</label
-              >
-            </div>
-            <div class="mdl-textfield mdl-js-textfield" style="display: block">
-              <input class="mdl-textfield__input" type="number" id="divisor" />
-              <label class="mdl-textfield__label" for="divisor"
-                >Enter divisor</label
-              >
-            </div>
-            <br />
-            <button
-              class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-              type="button"
-              onclick="longDivide()"
-            >
-              Do Long Division
-            </button>
-          </form>
-          <div id="sum-result" style="margin-top: 16px"></div>
+          <h4>Formula</h4>
+          <p>V = (4 / 3) × π × r³</p>
+          <div id="dimensions"></div>
+          <div id="volume-result" style="margin-top: 16px"></div>
         </div>
       </main>
     </div>

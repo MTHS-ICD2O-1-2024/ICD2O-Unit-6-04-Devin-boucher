@@ -8,24 +8,21 @@
 
 // eslint-disable-next-line no-unused-vars
 
-function longDivide () {
-  let dividend = parseInt(document.getElementById('dividend').value)
-  const divisor = parseInt(document.getElementById('divisor').value)
-  let quotient = 0
-  let steps = ''
+window.onload = function () {
+  // this calculates volume of a sphere
 
-  // Loop to subtract divisor from dividend
-  while (true) {
-    if (dividend >= divisor) {
-      steps += `${dividend} - ${divisor} = ${dividend - divisor}<br>`
-      dividend -= divisor
-      quotient++
-    } else {
-      break
-    }
-  }
+  const params = new URLSearchParams(document.location.search)
 
-  document.getElementById('sum-result').innerHTML =
-    `<p><strong>Steps:</strong><br>${steps}</p>
-    <p><strong>Result:</strong> Quotient = ${quotient}, Remainder = ${dividend}</p>`
+  // input
+  const radius = parseFloat(params.get('radius'))
+  console.log(radius)
+
+  // process
+  const volume = (4 / 3) * Math.PI * Math.pow(radius, 3)
+  const dimensions = '<ul>\n<li>radius = ' + radius + ' mm</li>\n</ul>'
+
+  // output
+  document.getElementById('dimensions').innerHTML = dimensions
+  document.getElementById('volume-result').innerHTML =
+  'Volume is: ' + volume.toFixed(2) + ' mm³'
 }
